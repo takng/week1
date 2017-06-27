@@ -6,21 +6,24 @@ function obfuscate(pw) {
 //Every "l" (el) in the string should be replaced with a "1" (one).
 
   var result = "";
+  var target = "";
 
   if (pw.length === 0) return result;
 
   for (var i = 0; i < pw.length; i++) {
+    target = "";
     if (pw[i] === 'a') {
-      result += '4';
+      target = '4';
     } else if (pw[i] === 'e') {
-      result += '3';
+      target = '3';
     } else if (pw[i] === 'o') {
-      result += '0';
+      target = '0';
     } else if (pw[i] === 'l') {
-      result += '1';
+      target = '1';
     } else {
-      result += pw[i];
+      target = pw[i];
     }
+    result += target;
   }
 
   return result;
