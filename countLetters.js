@@ -1,9 +1,10 @@
 function count(str) {
   var noSpaces = str.split(" ").join("");
   var result = {};
+  var alpha = '';
 
-  for (i=0; i < noSpaces.length; i++)  {
-    var alpha = noSpaces[i];
+  for (var i=0; i < noSpaces.length; i++)  {
+    alpha = noSpaces[i];
 //console.log(alpha);
 //console.log(result[alpha]);
     result[alpha] = (result[alpha] || 0) + 1;
