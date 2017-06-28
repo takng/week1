@@ -3,9 +3,10 @@ function count(str) {
   var result = {};
 
   for (i=0; i < noSpaces.length; i++)  {
-    var letter = noSpaces[i];
-
-    result[letter] = (result[letter] || 0) + 1;
+    var alpha = noSpaces[i];
+//console.log(alpha);
+//console.log(result[alpha]);
+    result[alpha] = (result[alpha] || 0) + 1;
   }
 
   return result;
